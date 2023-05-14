@@ -1,7 +1,7 @@
 export class SupermarketModel {
-   public id: number;
-   public name: string;
-   public location: string;
+   id: number;
+   name: string;
+   location: string;
 
    constructor(id: number, name: string, location:string) {
      this.id = id;
