@@ -8,6 +8,7 @@ import { AddSupermarketComponent } from './add-supermarket/add-supermarket.compo
 import { ViewSupermarketComponent } from './view-supermarket/view-supermarket.component';
 import { EditSupermarketComponent } from './edit-supermarket/edit-supermarket.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
     AddSupermarketComponent,
     ViewSupermarketComponent,
     EditSupermarketComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
