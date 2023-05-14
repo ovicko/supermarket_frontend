@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SupermarketService } from '../supermarket.service';
 import { SupermarketModel } from '../models/supermarket-model.model';
+import { Observable, catchError, throwError } from 'rxjs';
 import * as $ from 'jquery'
 
 @Component({
@@ -10,15 +11,16 @@ import * as $ from 'jquery'
 })
 export class HomeComponent implements OnInit{
 
-  supermarkets :Array<SupermarketModel>;
+  supermarkets : SupermarketModel[] = [];
   selectedSupermarket: SupermarketModel;
 
   constructor(public supermarketService: SupermarketService) { 
-    this.supermarkets = [];
   }
 
   ngOnInit() {
-    this.supermarkets = this.supermarketService.getSupermarkets(); 
+    this.supermarketService.getSupermarkets().subscribe((response : any[])=>{
+      this.supermarkets = response['supermarkets'];
+  });
       
     $(document).on('click', '.btn-grid', this.gridList);
     $(document).on('click', '.btn-list', this.showList);

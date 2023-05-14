@@ -11,19 +11,26 @@ import { SupermarketService } from '../supermarket.service';
 })
 export class ViewSupermarketComponent {
   supermarket:SupermarketModel;
+  supermarketId = this.route.snapshot.paramMap.get('id')
+
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,private service:SupermarketService  ) {}
 
     ngOnInit() {
-      const supermarketId = Number(this.route.snapshot.paramMap.get('id'));
-      this.supermarket = this.service.getSupermarketById(supermarketId);
+      this.service.getSupermarketById(this.supermarketId).subscribe((response : SupermarketModel)=>{
+        this.supermarket = response;
+  
+      });
     }
 
-    public deleteSupermarket(supermarketId:number){
-      this.service.deleteSupermarketById(supermarketId);
-      this.router.navigate(['/home'])
+    public deleteSupermarket(supermarketId:any){
+      if (window.confirm('Are you sure, you want to delete?')) {
+        this.service.deleteSupermarketById(supermarketId).subscribe((data) => {
+          this.router.navigate(['/home'])
+        });
+      }
+      
     }
-
 }
