@@ -8,7 +8,9 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">{{ supermarket.name }}</h5>
-            <p class="card-text">{{ supermarket.location }}</p>
+            <p class="card-text">{{ supermarket.location }}</p>            
+            <a  [routerLink]="['/view-supermarket', supermarket.id]" class="btn btn-primary">View</a>
+
           </div>
         </div>
       </div>
