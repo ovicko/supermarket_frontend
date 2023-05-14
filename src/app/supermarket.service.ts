@@ -23,4 +23,8 @@ export class SupermarketService {
     return this.supermarkets;
   }
 
+  public getSupermarketById(supermarketId:number):SupermarketModel {
+    return this.supermarkets.find(item=>item.id === supermarketId);
+  }
+
 }
