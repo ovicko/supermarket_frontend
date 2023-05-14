@@ -21,4 +21,9 @@ export class ViewSupermarketComponent {
       this.supermarket = this.service.getSupermarketById(supermarketId);
     }
 
+    public deleteSupermarket(supermarketId:number){
+      this.service.deleteSupermarketById(supermarketId);
+      this.router.navigate(['/home'])
+    }
+
 }

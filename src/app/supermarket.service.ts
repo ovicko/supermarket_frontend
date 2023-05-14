@@ -27,4 +27,20 @@ export class SupermarketService {
     return this.supermarkets.find(item=>item.id === supermarketId);
   }
 
+  public deleteSupermarketById(supermarketId:number):boolean {
+    var itemIndex =  this.supermarkets.findIndex(item=>item.id === supermarketId);
+    if (itemIndex > -1) {
+      this.supermarkets.splice(itemIndex,1);
+      console.log("supermarkets")
+      console.log(supermarketId)
+      console.log(itemIndex)
+
+      console.log(this.supermarkets)
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+
 }
