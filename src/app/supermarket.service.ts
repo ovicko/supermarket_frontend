@@ -1,21 +1,25 @@
 import { Injectable } from '@angular/core';
+import { SupermarketModel } from './models/supermarket-model.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SupermarketService {
-  supermarkets = [
-    {id: 1, name: "Supermarket 1", location: "Location 1"},
-    {id: 2, name: "Supermarket 1", location: "Location 2"},
-    {id: 3, name: "Supermarket 1", location: "Location 3"},
-    {id: 4, name: "Supermarket 1", location: "Location 4"},
-    {id: 5, name: "Supermarket 1", location: "Location 5"},
-
+  supermarkets:SupermarketModel[] = [
+    new SupermarketModel(1,"Supermarket 1","Location 1"),
+    new SupermarketModel(2,"Supermarket 2","Location 12"),
+    new SupermarketModel(3,"Supermarket 3","Location 13"),
+    new SupermarketModel(4,"Supermarket 4","Location 14"),
+    new SupermarketModel(1,"Supermarket 1","Location 1"),
+    new SupermarketModel(2,"Supermarket 2","Location 12"),
+    new SupermarketModel(3,"Supermarket 3","Location 13"),
+    new SupermarketModel(4,"Supermarket 4","Location 14"),
   ];
 
-  constructor() { }
+  constructor() { 
+  }
 
-  public getSupermarkets():Array<{id, name, location}>{
+  public getSupermarkets():Array<SupermarketModel>{
     return this.supermarkets;
   }
 
