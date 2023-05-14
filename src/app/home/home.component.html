@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="container mb-3 mt-3">
+    <button class="btn btn-primary btn-grid">Grid View</button>
+    <button class="btn btn-danger btn-list">List View</button>
+</div>
+  <div class="container grid-container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let supermarket of supermarkets">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ supermarket.name }}</h5>
+            <p class="card-text">{{ supermarket.location }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
