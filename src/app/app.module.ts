@@ -9,7 +9,7 @@ import { ViewSupermarketComponent } from './view-supermarket/view-supermarket.co
 import { EditSupermarketComponent } from './edit-supermarket/edit-supermarket.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ListComponent } from './supplier/list/list.component';
+import { SupplierListComponent } from './supplier/list/list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { ListComponent } from './supplier/list/list.component';
     EditSupermarketComponent,
     HeaderComponent,
     FooterComponent,
-    ListComponent
+    SupplierListComponent
   ],
   imports: [
     BrowserModule,
