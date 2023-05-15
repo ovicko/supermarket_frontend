@@ -1,4 +1,4 @@
-<div class="container mb-3 mt-3">
+<div class="mb-3 mt-3">
     <button class="btn btn-primary btn-grid">Grid View</button>
     <button class="btn btn-danger btn-list">List View</button>
 </div>
@@ -9,8 +9,8 @@
           <div class="card-body">
             <h5 class="card-title">{{ supermarket.name }}</h5>
             <p class="card-text">{{ supermarket.location }}</p>            
-            <a  [routerLink]="['/view-supermarket', supermarket.id]" class="btn btn-primary">View</a>
-            <a  [routerLink]="['/supermarket-update', supermarket.id]" class="btn btn-success">Edit</a>
+            <a  [routerLink]="['/view-supermarket', supermarket.id]" class="card-link">View</a>
+            <a  [routerLink]="['/supermarket-update', supermarket.id]" class="card-link">Edit</a>
           </div>
         </div>
       </div>
