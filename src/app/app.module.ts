@@ -7,10 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AddSupermarketComponent } from './add-supermarket/add-supermarket.component';
 import { ViewSupermarketComponent } from './view-supermarket/view-supermarket.component';
-import { EditSupermarketComponent } from './edit-supermarket/edit-supermarket.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { SupplierListComponent } from './supplier/list/list.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SupermarketUpdateComponent } from './supermarket-update/supermarket-update.component';
 
@@ -20,10 +18,8 @@ import { SupermarketUpdateComponent } from './supermarket-update/supermarket-upd
     HomeComponent,
     AddSupermarketComponent,
     ViewSupermarketComponent,
-    EditSupermarketComponent,
     HeaderComponent,
     FooterComponent,
-    SupplierListComponent,
     SupermarketUpdateComponent
   ],
   imports: [
