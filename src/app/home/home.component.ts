@@ -19,11 +19,13 @@ export class HomeComponent implements OnInit{
 
   ngOnInit() {
     this.supermarketService.getSupermarkets().subscribe((response : any[])=>{
-      this.supermarkets = response['supermarkets'];
-  });
-      
+       this.supermarkets = response['supermarkets'];
+    });
+
     $(document).on('click', '.btn-grid', this.gridList);
     $(document).on('click', '.btn-list', this.showList);
+      
+
   }
   public selectSupermarket(supermarket:SupermarketModel){
     this.selectedSupermarket = supermarket;
