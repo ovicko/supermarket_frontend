@@ -11,6 +11,7 @@ import { SupermarketService } from '../supermarket.service';
 import { SupermarketModel } from '../models/supermarket-model.model';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
+import { AppConfigComponent } from '../app-config.component';
 
 @Component({
   selector: 'app-add-supermarket',
@@ -48,7 +49,6 @@ export class AddSupermarketComponent implements OnInit{
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        Authorization: 'my-auth-token'
       })
     };
     if (this.supermarketForm.valid) {
@@ -58,7 +58,7 @@ export class AddSupermarketComponent implements OnInit{
       // this.supermarketForm.reset();
 
       this.serverClient.post<SupermarketModel>(
-        "http://127.0.0.1:8000/api/add-supermarkets",
+        AppConfigComponent.BASE_URL+"/supermarkets/add",
         JSON.stringify(this.supermarketForm.value), httpOptions)
         .subscribe({
           next: (response) => this.router.navigate(['/']),
