@@ -42,7 +42,7 @@ export class SupermarketService {
       .pipe(retry(1), catchError(this.handleError));
   }
 
-  // HttpClient API put() method => Update supermarket
+  // HttpClient API post() method => Update supermarket
   public updateSupermarket(supermarketId: any,supermarket:any): Observable<SupermarketModel> {
     return this.httpClient
       .post<SupermarketModel>(
