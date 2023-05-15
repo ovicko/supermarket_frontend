@@ -1,0 +1,16 @@
+<div class="container grid-container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let supplier of suppliers">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ supplier.name }}</h5>
+            <p class="card-text">{{ supplier.phone }}</p>
+            <p class="card-text">{{ supplier.supermarket }}</p>
+            <p class="card-text">{{ supplier.location }}</p>         
+            <a  [routerLink]="['/supplier/supplier-view', supplier.id]" class="card-link">View</a>
+            <a  [routerLink]="['/supplier/supplier-update', supplier.id]" class="card-link">Edit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

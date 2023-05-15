@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SupermarketUpdateComponent } from './supermarket-update/supermarket-update.component';
+import { SupplierListComponent } from './supplier/supplier-list/supplier-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SupermarketUpdateComponent } from './supermarket-update/supermarket-upd
     ViewSupermarketComponent,
     HeaderComponent,
     FooterComponent,
-    SupermarketUpdateComponent
+    SupermarketUpdateComponent,
+    SupplierListComponent
   ],
   imports: [
     BrowserModule,
