@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewSupermarketComponent } from './view-supermarket/view-supermarket.component';
 import { AddSupermarketComponent } from './add-supermarket/add-supermarket.component';
 import { SupermarketUpdateComponent } from './supermarket-update/supermarket-update.component';
+import { SupplierListComponent } from './supplier/supplier-list/supplier-list.component';
 
 const routes: Routes = [
   {path:  "", pathMatch:  "full",redirectTo:  "home"},
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: "view-supermarket/:id", component: ViewSupermarketComponent},
   {path: "supermarket-update/:id", component: SupermarketUpdateComponent},
   {path: "add-supermarket", component: AddSupermarketComponent},
+  {path: "supplier/supplier-list", component: SupplierListComponent},
 ];
 
 @NgModule({
